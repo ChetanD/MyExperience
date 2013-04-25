@@ -1,0 +1,8 @@
+Problem : 
+      two bootstrap modal created on click event
+Context : 
+      I was trying to use same code mention in bootstrap modal example on bootstrap website and to open on click event i was using hook because i want to save modal content as jquery template. so on click i fetch jquery template and add modal event to it.
+
+Solution:
+    Actually problem was bootstrap modal has been created twice because anchor tag(element i was trying to click) has attribute "data-target" whose value was set id of parent div of modal content ( div with class name "modal hide fade"). So when i click on tag i created modal on data using hook and after that default action of click event i.e. create modal with content of div having id same to data-target attribute id . so at any time when modal is open there are actually two modal present one on another and i can see only one .if i close uppermost then modal below that get appear .
+    
