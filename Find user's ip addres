@@ -1,0 +1,15 @@
+Problem:
+            Get user's ip address
+Context: 
+            I am using servlet 
+Solution:
+           We can get user's ip addres using http request header.There are two way you can do it
+1) there is header called "X-FORWARDED-FOR" which will tell ip address of user. this is userful to get user's exact when request is coming form proxy. It request is not coming from proxy then it will give you null value.
+2) ok if there is no proxy server between user machine and server then better way to get user's ip address is function "getRemoteAddr()" on http request
+
+Code in Java
+String ipaddress =  servletRequest.getHeader("X-FORWARDED-FOR");
+ if(ipaddress == null) {
+	  ipaddress = servletRequest.getRemoteAddr();
+ } 
+
