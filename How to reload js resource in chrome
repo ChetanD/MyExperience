@@ -1,0 +1,1 @@
+I was facing problem in chrome or any other browser to reload js source to reflect recent changes . i tried to refresh page to do it but it is not efficient and never work always so i search on internet and found solution .. i console (chrome) you can go to setting and enable "disable cache" check box . it is that simple
