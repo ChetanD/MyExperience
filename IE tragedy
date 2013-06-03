@@ -1,0 +1,10 @@
+Loop:
+     i was using normal loop as 
+          array.each(function(e) {
+                  console.log(e);
+          });
+    but this thing never work in ie .. so i shifted to jquery loop 
+         $.each(array,function(index,value) {
+               console.log(value);
+         });
+    thanks to jquery !! it works perfectly in ie10,ie9
